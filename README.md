@@ -54,12 +54,16 @@ python manage.py runserver
 Navigate to `http://127.0.0.1:8000/` in your web browser.
 
 ### Headers
-Make sure to include the following headers in your requests:
-- **Key**: `Content-Type`
-- **Value**: `application/json`
-- **Key**: `Authorization`
-- **Value**: `Bearer your_access_token`
+Make sure to include the following  in your requests:
+In the Authorization tab, add:
+        Auth Type: Bearer Token
+        Token:your_access_token
 
+Make sure to include the following Headers in your request:
+        Key:Content-Type
+        Value:application/json
+        
+Click Send to execute the request.
 ## Authentication
 The API uses JWT (JSON Web Token) token-based authentication.
 
@@ -110,11 +114,6 @@ http://127.0.0.1:8000/api/
 #### 1. Create Employee
 - **URL**: `/employees/`
 - **Method**: `POST`
-- **Request Headers**:
-- **Key**: `Content-Type`
-- **Value**: `application/json`
-- **Key**: `Authorization`
-- **Value**: `Bearer your_access_token`
 - **Request Body**:
 ```json
 {
@@ -145,11 +144,6 @@ http://127.0.0.1:8000/api/
 #### 4. Update Employee
 - **URL**: `/employees/{id}/`
 - **Method**: `PUT`
-- **Request Headers**:
-  - **Key**: `Content-Type`
-  - **Value**: `application/json`
-  - **Key**: `Authorization`
-   - **Value**: `Bearer your_access_token`
 - **Request Body**:
 ```json
 {
@@ -167,9 +161,6 @@ http://127.0.0.1:8000/api/
 #### 5. Delete Employee
 - **URL**: `/employees/{id}/`
 - **Method**: `DELETE`
-- **Request Headers**:
-  - **Key**: `Authorization`
-  - **Value**: `Bearer your_access_token`
 - **Responses**:
   - **204 No Content**: Employee deleted successfully.
   - **404 Not Found**: Employee with the specified ID does not exist.
