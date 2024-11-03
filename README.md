@@ -56,9 +56,9 @@ Navigate to `http://127.0.0.1:8000/` in your web browser.
 ### Headers
 Make sure to include the following headers in your requests:
 - **Key**: `Content-Type`
-  - **Value**: `application/json`
+- **Value**: `application/json`
 - **Key**: `Authorization`
-  - **Value**: `Bearer your_access_token`
+- **Value**: `Bearer your_access_token`
 
 ## Authentication
 The API uses JWT (JSON Web Token) token-based authentication.
@@ -111,10 +111,10 @@ http://127.0.0.1:8000/api/
 - **URL**: `/employees/`
 - **Method**: `POST`
 - **Request Headers**:
-  - **Key**: `Content-Type`
-    - **Value**: `application/json`
-  - **Key**: `Authorization`
-    - **Value**: `Bearer your_access_token`
+- **Key**: `Content-Type`
+- **Value**: `application/json`
+- **Key**: `Authorization`
+- **Value**: `Bearer your_access_token`
 - **Request Body**:
 ```json
 {
@@ -147,9 +147,9 @@ http://127.0.0.1:8000/api/
 - **Method**: `PUT`
 - **Request Headers**:
   - **Key**: `Content-Type`
-    - **Value**: `application/json`
+  - **Value**: `application/json`
   - **Key**: `Authorization`
-    - **Value**: `Bearer your_access_token`
+   - **Value**: `Bearer your_access_token`
 - **Request Body**:
 ```json
 {
@@ -169,7 +169,7 @@ http://127.0.0.1:8000/api/
 - **Method**: `DELETE`
 - **Request Headers**:
   - **Key**: `Authorization`
-    - **Value**: `Bearer your_access_token`
+  - **Value**: `Bearer your_access_token`
 - **Responses**:
   - **204 No Content**: Employee deleted successfully.
   - **404 Not Found**: Employee with the specified ID does not exist.
