@@ -201,6 +201,6 @@ Common Test Scenarios:
   
 Running the Tests:
 ```bash
-python manage.py test employees.test_views.EmployeeTests to execute the tests.
+python manage.py test employees.test_views.EmployeeTests 
 ```
 This command will run all the test methods within the EmployeeTests class and report any failures or errors encountered during the testing process.
