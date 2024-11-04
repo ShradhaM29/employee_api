@@ -58,6 +58,8 @@ python manage.py runserver
 ### Step 3: Access the Application
 Navigate to `http://127.0.0.1:8000/` in your web browser.
 
+### In the Postman do following settings
+
 ### Headers
 In the Authorization tab, add:
 
