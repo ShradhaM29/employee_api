@@ -183,6 +183,7 @@ Purpose of test_views.py
 - Validate API Functionality: The tests ensure that each API endpoint behaves as intended, returning the correct HTTP status codes and responses for different scenarios.
 - Catch Bugs Early: By writing tests for both normal and edge cases, we can identify and fix potential issues before they reach production.
 - Facilitate Future Development: Well-defined tests make it easier for developers to understand the expected behavior of the API and to ensure that new changes do not break existing functionality.
+  
 Key Components of the Testing Process
 Setup:
 - Import necessary modules from Django and the Django REST framework.
