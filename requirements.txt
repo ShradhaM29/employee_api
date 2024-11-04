@@ -1,0 +1,4 @@
+Django>=3.2,<4.0  # Specify your Django version if needed
+djangorestframework  # For building REST APIs
+djangorestframework-simplejwt  # For JWT authentication
+django-filter  # For filtering results in your API
