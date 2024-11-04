@@ -12,19 +12,21 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta  # Import timedelta for token lifetime settings
-import os  # Import os for environment variables
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
 # Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'your-default-secret-key')  # Set this in PythonAnywhere environment variables
+SECRET_KEY = 'django-insecure-y4(=06ree(c$22%ew3%drs+$2!rl0iw*(92&lgey0%w)-3hh+x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False  # Set to False in production
+DEBUG = True
 
-ALLOWED_HOSTS = ['shradha24.pythonanywhere.com']  # Add your PythonAnywhere domain
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -73,19 +75,20 @@ TEMPLATES = [
 WSGI_APPLICATION = 'employee_api.wsgi.application'
 
 
-# Database configuration for production (using MySQL)
+# Database
+# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DB_NAME', 'your_db_name'),  # Set these in PythonAnywhere environment variables
-        'USER': os.environ.get('DB_USER', 'your_username'),  # Set these in PythonAnywhere environment variables
-        'PASSWORD': os.environ.get('DB_PASSWORD', 'your_password'),  # Set these in PythonAnywhere environment variables
-        'HOST': os.environ.get('DB_HOST', 'your_db_hostname.mysql.pythonanywhere-services.com'),  # Set these in PythonAnywhere environment variables
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
+
 # Password validation
+# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -101,26 +104,31 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
 # Internationalization
+# https://docs.djangoproject.com/en/3.2/topics/i18n/
+
 LANGUAGE_CODE = 'en-us'
+
 TIME_ZONE = 'UTC'
+
 USE_I18N = True
+
 USE_L10N = True
+
 USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Directory for collected static files
+# https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-# Media files
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')  # Directory for user-uploaded files
+STATIC_URL = '/static/'
 
 # Default primary key field type
+# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# REST framework settings
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
