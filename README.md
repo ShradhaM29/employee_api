@@ -59,13 +59,16 @@ python manage.py runserver
 Navigate to `http://127.0.0.1:8000/` in your web browser.
 
 ### Headers
-Make sure to include the following  in your requests:
 In the Authorization tab, add:
+
         Auth Type: Bearer Token
+        
         Token:your_access_token
 
-Make sure to include the following Headers in your request:
+In the Headers tab, add: 
+
         Key:Content-Type
+        
         Value:application/json
         
 Click Send to execute the request.
