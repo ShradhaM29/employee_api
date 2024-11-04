@@ -200,5 +200,7 @@ Common Test Scenarios:
 - Not Found Cases: For both retrieval and deletion, ensure that requesting a non-existent employee results in a 404 Not Found response.
   
 Running the Tests:
+```bash
 python manage.py test employees.test_views.EmployeeTests to execute the tests.
+```
 This command will run all the test methods within the EmployeeTests class and report any failures or errors encountered during the testing process.
