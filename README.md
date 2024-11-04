@@ -93,7 +93,10 @@ Before obtaining the token, ensure you have a superuser account, which has permi
 To obtain your JWT token, send a `POST` request to the token endpoint.
 
 - **URL**: `http://localhost:8000/api/token/`
-- **Payload**:
+- Go to the Body tab.
+- Select the raw option.
+- In the dropdown next to raw, select JSON.
+- Write your payload in the text area. For example
 ```json
 {
   "username": "yourusername",
