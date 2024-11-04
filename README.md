@@ -5,7 +5,9 @@ The Employee Management System is a web application designed to manage employee 
 
 ## Features
 -**CRUD Operations**: Create, Read, Update, and Delete employees.
+
 -**Filtering and Pagination**: Filter employees by department/role and paginate results.
+
 -**Authentication**: JWT token-based authentication for secure access.
 
 ## Technologies Used
