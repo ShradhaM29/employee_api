@@ -184,16 +184,6 @@ Purpose of test_views.py
 - Catch Bugs Early: By writing tests for both normal and edge cases, we can identify and fix potential issues before they reach production.
 - Facilitate Future Development: Well-defined tests make it easier for developers to understand the expected behavior of the API and to ensure that new changes do not break existing functionality.
   
-Key Components of the Testing Process
-
-Setup:
-- Import necessary modules from Django and the Django REST framework.
-- Define the test class that inherits from APITestCase, which provides utility methods for testing API views.
-  
-Writing Test Cases:
-- Each test case is defined as a method within the test class. The naming convention typically starts with test_ followed by a description of the functionality being tested.
-- Use the self.client object to simulate requests to the API.
-  
 Common Test Scenarios:
 - Creating an Employee: Test that valid employee data can be submitted and results in a successful creation (HTTP 201) with the correct details stored.
 - Handling Duplicate Emails: Test that attempting to create an employee with an existing email address results in a proper error response (HTTP 400).
