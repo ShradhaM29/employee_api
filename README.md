@@ -180,27 +180,23 @@ http://127.0.0.1:8000/api/
 The test_views.py file is designed to contain unit tests for the views associated with the employee management API. It serves the purpose of validating that the various endpoints of the API function as expected, ensuring that all CRUD (Create, Read, Update, Delete) operations behave correctly under different conditions. This testing is essential for maintaining the integrity of the application as changes are made to the codebase.
 
 Purpose of test_views.py
-Validate API Functionality: The tests ensure that each API endpoint behaves as intended, returning the correct HTTP status codes and responses for different scenarios.
-Catch Bugs Early: By writing tests for both normal and edge cases, we can identify and fix potential issues before they reach production.
-Facilitate Future Development: Well-defined tests make it easier for developers to understand the expected behavior of the API and to ensure that new changes do not break existing functionality.
+- Validate API Functionality: The tests ensure that each API endpoint behaves as intended, returning the correct HTTP status codes and responses for different scenarios.
+- Catch Bugs Early: By writing tests for both normal and edge cases, we can identify and fix potential issues before they reach production.
+- Facilitate Future Development: Well-defined tests make it easier for developers to understand the expected behavior of the API and to ensure that new changes do not break existing functionality.
 Key Components of the Testing Process
 Setup:
-
-Import necessary modules from Django and the Django REST framework.
-Define the test class that inherits from APITestCase, which provides utility methods for testing API views.
+- Import necessary modules from Django and the Django REST framework.
+- Define the test class that inherits from APITestCase, which provides utility methods for testing API views.
 Writing Test Cases:
-
-Each test case is defined as a method within the test class. The naming convention typically starts with test_ followed by a description of the functionality being tested.
-Use the self.client object to simulate requests to the API.
+- Each test case is defined as a method within the test class. The naming convention typically starts with test_ followed by a description of the functionality being tested.
+- Use the self.client object to simulate requests to the API.
 Common Test Scenarios:
-
-Creating an Employee: Test that valid employee data can be submitted and results in a successful creation (HTTP 201) with the correct details stored.
-Handling Duplicate Emails: Test that attempting to create an employee with an existing email address results in a proper error response (HTTP 400).
-Retrieving Employee Details: Validate that a specific employee's information can be fetched using their ID, ensuring the response is correct and complete.
-Updating Employee Information: Verify that an employee's details can be modified successfully, confirming that changes are reflected in the database.
-Deleting an Employee: Test that an employee can be removed from the system and that the appropriate response (HTTP 204) is returned.
-Not Found Cases: For both retrieval and deletion, ensure that requesting a non-existent employee results in a 404 Not Found response.
+- Creating an Employee: Test that valid employee data can be submitted and results in a successful creation (HTTP 201) with the correct details stored.
+- Handling Duplicate Emails: Test that attempting to create an employee with an existing email address results in a proper error response (HTTP 400).
+- Retrieving Employee Details: Validate that a specific employee's information can be fetched using their ID, ensuring the response is correct and complete.
+- Updating Employee Information: Verify that an employee's details can be modified successfully, confirming that changes are reflected in the database.
+- Deleting an Employee: Test that an employee can be removed from the system and that the appropriate response (HTTP 204) is returned.
+- Not Found Cases: For both retrieval and deletion, ensure that requesting a non-existent employee results in a 404 Not Found response.
 Running the Tests:
-
-Use the Django management command python manage.py test employees.test_views.EmployeeTests to execute the tests.
+python manage.py test employees.test_views.EmployeeTests to execute the tests.
 This command will run all the test methods within the EmployeeTests class and report any failures or errors encountered during the testing process.
